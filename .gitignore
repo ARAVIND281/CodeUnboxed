@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.pdb
+*.egg-info/
+env/
+venv/
+.env
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Logs
+*.log
+
+# macOS system files
+.DS_Store
+
+# Frontend build (if needed)
+frontend/node_modules/
+frontend/.next/
+frontend/dist/
+frontend/build/
