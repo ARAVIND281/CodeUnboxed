@@ -10,11 +10,11 @@ GROQ_API_URL = "https://api.groq.com/openai/v1/chat/completions"
 def get_code_explanation(code: str, language: str) -> str:
     prompt = f"""You are a helpful AI assistant. Explain the following {language} code in simple terms.
 Also include time and space complexity if applicable.
-
+    
 Code:
 {code}
 """
-
+    print("GROQ KEY:", GROQ_API_KEY)
     res = requests.post(
         GROQ_API_URL,
         headers={
@@ -22,7 +22,7 @@ Code:
             "Content-Type": "application/json"
         },
         json={
-            "model": "mixtral-8x7b-32768",
+            "model": "llama-3.1-8b-instant",
             "messages": [{"role": "user", "content": prompt}],
             "temperature": 0.3,
         }
