@@ -46,7 +46,7 @@ const CodeExplainer = () => {
     
     try {
       // Replace with your actual backend URL
-      const response = await fetch('https://your-server-url/api/explain', {
+      const response = await fetch('http://127.0.0.1:8000/api/explain', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
