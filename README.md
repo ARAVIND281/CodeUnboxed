@@ -85,7 +85,7 @@ CodeUnboxed/
 
 ---
 
-### 🎥 Demo Video
+### 🎥 Demo Video [https://raw.githubusercontent.com/ARAVIND281/CodeUnboxed/main/example/demo.mp4]
 
 <video src="https://raw.githubusercontent.com/ARAVIND281/CodeUnboxed/main/example/demo.mp4" controls width="100%" ></video>
 
