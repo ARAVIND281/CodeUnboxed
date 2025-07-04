@@ -219,9 +219,30 @@ Please try again later or check your internet connection.`);
         </div>
 
         {/* Footer */}
-        <div className="text-center mt-12 text-muted-foreground text-sm">
-          <p>Built with ❤️ using React, TypeScript, and Tailwind CSS</p>
-        </div>
+        <footer className="text-center mt-12 text-muted-foreground text-sm">
+          <p>
+            Built with ❤️ by{" "}
+            <a
+              href="https://www.linkedin.com/in/aravinds28"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
+              Aravind S
+            </a>{" "}
+            •{" "}
+            <a
+              href="https://github.com/ARAVIND281"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
+              GitHub
+            </a>
+          </p>
+        </footer>
+
+
       </div>
     </div>
   );
