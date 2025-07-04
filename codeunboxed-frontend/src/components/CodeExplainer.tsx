@@ -142,8 +142,21 @@ Please try again later or check your internet connection.`);
                     <SelectContent className="bg-popover border-border">
                       <SelectItem value="Python">Python</SelectItem>
                       <SelectItem value="JavaScript">JavaScript</SelectItem>
+                      <SelectItem value="TypeScript">TypeScript</SelectItem>
                       <SelectItem value="Java">Java</SelectItem>
                       <SelectItem value="C++">C++</SelectItem>
+                      <SelectItem value="C">C</SelectItem>
+                      <SelectItem value="C#">C#</SelectItem>
+                      <SelectItem value="Go">Go</SelectItem>
+                      <SelectItem value="Rust">Rust</SelectItem>
+                      <SelectItem value="Ruby">Ruby</SelectItem>
+                      <SelectItem value="PHP">PHP</SelectItem>
+                      <SelectItem value="Kotlin">Kotlin</SelectItem>
+                      <SelectItem value="Swift">Swift</SelectItem>
+                      <SelectItem value="SQL">SQL</SelectItem>
+                      <SelectItem value="Bash">Bash</SelectItem>
+                      <SelectItem value="HTML">HTML</SelectItem>
+                      <SelectItem value="CSS">CSS</SelectItem>
                       <SelectItem value="Other">Other</SelectItem>
                     </SelectContent>
                   </Select>
