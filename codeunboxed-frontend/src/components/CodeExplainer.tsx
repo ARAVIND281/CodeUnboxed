@@ -23,7 +23,7 @@ const CodeExplainer = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!code.trim()) {
       toast({
         title: "Missing Code",
@@ -43,10 +43,10 @@ const CodeExplainer = () => {
     }
 
     setLoading(true);
-    
+
     try {
       // Replace with your actual backend URL
-      const response = await fetch('https://your-server-url/api/explain', {
+      const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/explain`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -64,44 +64,24 @@ const CodeExplainer = () => {
 
       const data: ExplainResponse = await response.json();
       setExplanation(data.explanation);
-      
+
       toast({
         title: "✨ Code Explained!",
         description: "Your code explanation is ready.",
       });
     } catch (error) {
       console.error('Error explaining code:', error);
-      
-      // For demo purposes, show a sample explanation
-      const sampleExplanation = `# Code Analysis
 
-## Overview
-This appears to be ${language} code that you've submitted for explanation.
+      setExplanation(`❌ Something went wrong while generating the explanation.
+Please try again later or check your internet connection.`);
 
-## Key Components
-- **Structure**: The code follows standard ${language} conventions
-- **Complexity Level**: ${level}
-
-## Explanation
-*Note: This is a demo response. Please configure your backend API endpoint to get real explanations.*
-
-The code you've provided would typically be analyzed for:
-- Syntax and structure
-- Logic flow and algorithms
-- Best practices and potential improvements
-- Common patterns and conventions
-
----
-*Powered by CodeUnboxed AI*`;
-      
-      setExplanation(sampleExplanation);
-      
       toast({
-        title: "Demo Mode",
-        description: "Showing sample explanation. Configure your API endpoint for real results.",
-        variant: "default",
+        title: "Server Error",
+        description: "Failed to get explanation. Please try again shortly.",
+        variant: "destructive",
       });
-    } finally {
+    }
+    finally {
       setLoading(false);
     }
   };
