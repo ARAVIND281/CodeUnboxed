@@ -6,5 +6,5 @@ router = APIRouter()
 
 @router.post("/api/explain", response_model=ExplainResponse)
 def explain_code(req: ExplainRequest):
-    explanation = get_code_explanation(req.code, req.language)
+    explanation = get_code_explanation(req.code, req.language, req.level)
     return ExplainResponse(explanation=explanation)
