@@ -8,6 +8,7 @@ import { Label } from '@/components/ui/label';
 import { useToast } from '@/hooks/use-toast';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 interface ExplainResponse {
   explanation: string;
@@ -220,24 +221,29 @@ Please try again later or check your internet connection.`);
 
         {/* Footer */}
         <footer className="text-center mt-12 text-muted-foreground text-sm">
-          <p>
-            Built with ❤️ by{" "}
+          <p className="flex justify-center items-center gap-4">
+            Built with ❤️{" "}
+            <a
+              href="mailto:aravind@inbo.tech"
+              className="underline"
+            >
+              Aravind S
+            </a>
             <a
               href="https://www.linkedin.com/in/aravinds28"
               target="_blank"
               rel="noopener noreferrer"
-              className="underline"
+              className="hover:text-blue-500 transition"
             >
-              Aravind S
-            </a>{" "}
-            •{" "}
+              <FaLinkedin size={20} />
+            </a>
             <a
               href="https://github.com/ARAVIND281"
               target="_blank"
               rel="noopener noreferrer"
-              className="underline"
+              className="hover:text-gray-500 transition"
             >
-              GitHub
+              <FaGithub size={20} />
             </a>
           </p>
         </footer>
